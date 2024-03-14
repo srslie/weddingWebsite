@@ -3,6 +3,15 @@
   text-align: center;
 }
 
+body {
+  background-image: url("images/wedding_stamp.jpeg");
+  background-size: 100% auto;
+}
+
+header {
+  padding-top: 8em;
+}
+
 .letter {
   display: inline-block;
 }

@@ -1,9 +1,9 @@
 
 // Wrap every letter in a span
-var textWrapper = document.querySelector('.wedding');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+// var textWrapper = document.querySelector('.wedding');
+// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-letters = document.querySelectorAll('.wedding .letter');
+letters = document.querySelectorAll('.weddingletter');
 for(letter in letters) {
   startrot = Math.random() * 30 - 10;
   endrot = Math.random() * 30 - 10;
