@@ -2,3 +2,7 @@
   font-family: 'American Typewriter', serif;
   text-align: center;
 }
+
+.letter {
+  display: inline-block;
+}
