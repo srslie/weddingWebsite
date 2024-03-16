@@ -1,4 +1,12 @@
-allcards = document.querySelectorAll(".card");
+let allcards = document.querySelectorAll(".card");
+
+function boozier(p0, p1, p2, p3, t) {
+    let oneMinus = 1 - t;
+    return oneMinus * oneMinus * oneMinus * p0 +
+        3 * oneMinus * oneMinus * t * p1 +
+        3 * oneMinus * t * t * p2 +
+        t * t * t * p3;
+}
 
 i = 0;
 document.querySelectorAll(".card").forEach((card) => {
@@ -25,16 +33,21 @@ for(letter in letters) {
     });
 }
 
-const clamp = (n, min, max) =>
-Math.min(Math.max(n, min), max)
+const clamp = (n, min, max) => Math.min(Math.max(n, min), max)
 
 onscroll = (event) => {
     percent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-    i = 0;
+    let i = 0;
     allcards.forEach((card) => {
-        start = i / allcards.length;
-        end = start + 1 / (allcards.length + 1)
-        rot = clamp(179 * (percent - start) / (end - start), 0, 179)
+        let start = i / allcards.length;
+        let end = start + 1 / (allcards.length + 1);
+        let t = (percent - start) / (end - start);
+        if(t >= 0 && t <= 1) {
+            console.log(t);
+            t = boozier(0, 1.1, 0.9, 1, t);
+            console.log(t);
+        }
+        let rot = clamp(179 * t, 0, 179)
         card.style.transform = `perspective(20cm) rotateX(${rot}deg)` 
 
         if(rot > 90) {
