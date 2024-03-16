@@ -9,14 +9,8 @@ body {
   background-attachment: fixed;
   height: 500em;
 }
-
-@keyframes flip-over {
-  from {
-    transform: perspective(20cm) rotateY(0deg);
-  }
-  to {
-    transform: rotateY(-179deg);
-  }
+html {
+  overscroll-behavior:none;
 }
 
 header {
@@ -27,53 +21,53 @@ header {
   height: 10%;
 }
 
+footer {
+  position: fixed;
+  bottom: 0em;
+  width: 100%;
+  z-index: -5;
+}
+
 .letter {
   display: inline-block;
 }
 
-.culled {
+.front {
+  backface-visibility: hidden;
+  transform: translate(-50%, -50%);
+}
+
+.back {
+  transform: translate(-50%, -50%) rotateX(180deg);
   backface-visibility: hidden;
 }
 
-.card_front {
+.card {
   position: fixed;
   background-color: rgb(255,255,255);
-  width: 40%; 
-  top: 8em;
-  height: 30em;
+  width: 80%; 
+  top: 55%;
+  left: 10%;
+  height: 38%;
+  transform: perspective(20cm);
   transition: transform;
+  transform-origin: top;
   transform-style: preserve-3d;
-  animation: flip-over cubic-bezier(0.645, 0.045, 0.355, 1);
-  animation-fill-mode: both;
 }
 
-.left {
-  transform-origin:right;
-  right: 50%;
-}
-
-.right {
-  transform-origin:left;
+.bottom {
+  position: absolute;
+  margin: auto;
+  width: 90%;
+  top: 50%;
   left: 50%;
 }
 
-.first-card {
-  animation-range: 5% 20%;
-  animation-timeline: scroll(block root);
-  z-index: -1;
-}
-.second-card {
-  animation-range: 20% 40%;
-  animation-timeline: scroll(block root);
-  z-index: -2;
-}
-.third-card {
-  animation-timeline: scroll(block root);
-  animation-range: 40% 60%;
-  z-index: -3;
-}
-.fourth-card {
-  animation-timeline: scroll(block root);
-  animation-range: 60% 80%;
-  z-index: -4;
+.top {
+  position: absolute;
+  margin: auto;
+  width:90%;
+
+  top: 50%;
+  left: 50%;
 }

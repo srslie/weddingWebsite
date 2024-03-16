@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <title>Alice & Connor's Wedding</title>
     <script src="anime.js"></script>
-    <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
     <link rel="stylesheet" href="main.css"/>
   </head>
   <body>
@@ -16,39 +15,46 @@
       <img class="weddingletter" src="images/i.png"/>
       <img class="weddingletter" src="images/n.png"/>
       <img class="weddingletter" src="images/g.png"/>
-      <h2>Alice Ruppert & Connor Janowiak</h2>
-      <h2>Boulder, Colorado</h2>
       <h3></h3>
     </header>
     <main>
       <!-- intro -->
-      <article>
-        <p>We're getting married! 
-          <br>
-          We would love to celebrate with you and introduce our friends and families to each other.
-        </p>
-      </article>
-      <button>
-        <p><a href="https://forms.gle/MtRkGKwEkq6iHjAS9">RSVP</a></p>
-      </button>
-      <!-- timeline -->
-      <article class="right card_front first-card"></article>
-      <article class="right card_front first-card culled">
-        <h2>Timeline</h2>
-          <h3>Friday, May 31, 2024</h3>
-          <p class="times">4-4:30PM</p>
-          <p class="location">Boulder Foothills Community Park</p>
-          <p class="address">800 Cherry Ave, Boulder, CO, 80304, United States</p>
-          <p class="details">
-            Welcome to Boulder! 
+
+      <div class="card">
+        <div class="bottom front">
+          <h2>Alice Ruppert & Connor Janowiak</h2>
+          <h2>Boulder, Colorado</h2>
+          <p>We're getting married! 
             <br>
-            Come see our neck of the woods (North Boulder, a park minutes from our house) for food and drinks, plus lawn games or hiking.
-            <br>
-            We'd love time for family and friends to casually mingle and catch up.
+            We would love to celebrate with you and introduce our friends and families to each other.
           </p>
-      </article>
-      <article class="right card_front second-card"></article>
-      <article class="right card_front second-card culled">
+          <button>
+            <p><a href="https://forms.gle/MtRkGKwEkq6iHjAS9">RSVP</a></p>
+          </button>
+        </div>
+
+        <div class="top back">
+          <h2>Timeline</h2>
+            <h3>Friday, May 31, 2024</h3>
+            <p class="times">4-4:30PM</p>
+            <p class="location">Boulder Foothills Community Park</p>
+            <p class="address">800 Cherry Ave, Boulder, CO, 80304, United States</p>
+        </div>
+      </div>
+
+      <!-- timeline -->
+      <div class="card">
+        <div class="bottom front">
+            <p class="details">
+              Welcome to Boulder! 
+              <br>
+              Come see our neck of the woods (North Boulder, a park minutes from our house) for food and drinks, plus lawn games or hiking.
+              <br>
+              We'd love time for family and friends to casually mingle and catch up.
+            </p>
+        </div>
+
+        <div class="top back">
         <h3>Saturday, June 1, 2024</h3>
           <h4>Ceremony</h4>
           <p class="times">4-4:30PM</p>
@@ -63,10 +69,17 @@
             <br>
             Walking distance to our reception!
           </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="bottom front">
           <h4>Reception</h4>
           <p class="times">4-4:30PM</p>
           <p class="location">Boulder Dushanbe Tea House</p>
           <p class="address">1770 13th St, Boulder, CO, 80302</p>
+        </div>
+        <div class="top back">
           <p class="details">
             <p class="attire">Attire: Summery Tea or Cocktail, florals, patterns, colors!</p>
             <p>
@@ -78,63 +91,68 @@
               <li>7pm: toasts and dessert</li>
               <li>Then dancing all night!</li>
             </list>
-          </p>
-      </article>
-      <article class="right card_front third-card"></article>
-      <article class="right card_front third-card culled">
-          <h4>Afterparty</h4>
-          <p class="times">4-4:30PM</p>
-          <p class="location"></p>
-          <p class="address"></p>
-          <p class="details">
-            <p class="attire">Attire: Clothing Optional</p>
-            We're crawling the pubs in Boulder! Let's party and wander the walking mall!
-            <list>
-              <li>Rosetta Hall (live music)</li>
-              <li>Press Play (barcade)</li>
-              <li>Jungle (Tiki and flames)</li>
-              <li>Avanti (Late night pizza)</li>
-            </list>
-          </p>
-      </article>
-      <article class="right card_front fourth-card"></article>
-      <article class="right card_front fourth-card culled">
-        <h3>Sunday, June 2, 2024</h3>
-          <h4>Goodbye</h4>
-          <p class="times">11AM-2PM</p>
-          <p class="location"></p>
-          <p class="address"></p>
-          <p class="details">
-            <p class="attire">Attire: Anything</p>
-            We'd love to see you off and thank you for coming!
-            We'll be hanging out at a little bookstore with a coffee/tea/pastries counter and nice space out back. Very Boulder.
-          </p>
-      </article>
+          </div>
+      </div>
+
+      <div class="card">
+        <div class="bottom front">
+            <h4>Afterparty</h4>
+            <p class="times">4-4:30PM</p>
+            <p class="tocation"></p>
+            <p class="address"></p>
+            <p class="details">
+              <p class="attire">Attire: Clothing Optional</p>
+              We're crawling the pubs in Boulder! Let's party and wander the walking mall!
+              <list>
+                <li>Rosetta Hall (live music)</li>
+                <li>Press Play (barcade)</li>
+                <li>Jungle (Tiki and flames)</li>
+                <li>Avanti (Late night pizza)</li>
+              </list>
+            </p>
+        </div>
+        <div class="top back">
+          <h3>Sunday, June 2, 2024</h3>
+            <h4>Goodbye</h4>
+            <p class="times">11AM-2PM</p>
+            <p class="location"></p>
+            <p class="address"></p>
+            <p class="details">
+              <p class="attire">Attire: Anything</p>
+              We'd love to see you off and thank you for coming!
+              We'll be hanging out at a little bookstore with a coffee/tea/pastries counter and nice space out back. Very Boulder.
+            </p>
+          </div>
+      </div>
+
       <!-- travel & lodging  -->
-      <article>
-        <h3>Travel & Lodging</h3>
-        <h4>Airport</h4>
-        Fly into DIA
-        <h4>Transit</h4>
-        Take the AB bus
-        <h4>Hotels</h4>
-        <list>
-          <li>Basecamp</li>
-          <li>Boulderado</li>
-          <li>St. Julien</li>
-        </list>
-      </article>
+      <div class="card">
+        <div class="bottom front">
+          <h3>Travel & Lodging</h3>
+          <h4>Airport</h4>
+          Fly into DIA
+          <h4>Transit</h4>
+          Take the AB bus
+          <h4>Hotels</h4>
+          <list>
+            <li>Basecamp</li>
+            <li>Boulderado</li>
+            <li>St. Julien</li>
+          </list>
+        </div>
+
+        <div class="top back">
+          <h3>Things to Do in Boulder</h3>
+          <list>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </list>
+        </div>
+      </div>
       <!-- Things to do in Boulder -->
-      <article>
-        <h3>Things to Do in Boulder</h3>
-        <list>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </list>
-      </article>
       <!-- Registry -->
       <!-- RSVP -->
     </main>
