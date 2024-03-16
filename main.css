@@ -6,12 +6,74 @@
 body {
   background-image: url("images/wedding_stamp.jpeg");
   background-size: 100% auto;
+  background-attachment: fixed;
+  height: 500em;
+}
+
+@keyframes flip-over {
+  from {
+    transform: perspective(20cm) rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-179deg);
+  }
 }
 
 header {
-  padding-top: 8em;
+  padding-top: 4em;
+  position: fixed;
+  padding-top: 0;
+  width: 100%;
+  height: 10%;
 }
 
 .letter {
   display: inline-block;
+}
+
+.culled {
+  backface-visibility: hidden;
+}
+
+.card_front {
+  position: fixed;
+  background-color: rgb(255,255,255);
+  width: 40%; 
+  top: 8em;
+  height: 30em;
+  transition: transform;
+  transform-style: preserve-3d;
+  animation: flip-over cubic-bezier(0.645, 0.045, 0.355, 1);
+  animation-fill-mode: both;
+}
+
+.left {
+  transform-origin:right;
+  right: 50%;
+}
+
+.right {
+  transform-origin:left;
+  left: 50%;
+}
+
+.first-card {
+  animation-range: 5% 20%;
+  animation-timeline: scroll(block root);
+  z-index: -1;
+}
+.second-card {
+  animation-range: 20% 40%;
+  animation-timeline: scroll(block root);
+  z-index: -2;
+}
+.third-card {
+  animation-timeline: scroll(block root);
+  animation-range: 40% 60%;
+  z-index: -3;
+}
+.fourth-card {
+  animation-timeline: scroll(block root);
+  animation-range: 60% 80%;
+  z-index: -4;
 }
