@@ -112,8 +112,9 @@ footer {
   position: absolute;
   margin: auto;
   width:90%;
-  top: 50%;
   left: 50%;
+  transform-origin: bottom;
+  bottom: 45%;
 }
 
 .bottom {
@@ -122,20 +123,19 @@ footer {
   position: absolute;
   margin: auto;
   width: 90%;
-  top: 50%;
   left: 50%;
+  transform-origin: top;
+  top: 55%;
 }
 
 .card {
   position: fixed;
   background-color: rgb(255,255,255);
   width: 80%; 
-  top: 55%;
   left: 10%;
   height: 38%;
   transform: perspective(20cm);
   transition: transform;
-  transform-origin: top;
   transform-style: preserve-3d;
   box-shadow: 0 1px 1px rgba(0,0,0,0.1), 
   0 2px 2px rgba(0,0,0,0.1), 

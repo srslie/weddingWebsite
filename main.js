@@ -1,5 +1,5 @@
 const allcards = document.querySelectorAll(".card");
-const numberOfCards = allcards.length;
+const numberOfCards = Math.min(allcards.length/2);
 const positionYperCard = (document.body.scrollHeight - window.innerHeight) / numberOfCards;
 
 //event listeners
@@ -50,6 +50,13 @@ function boozier(p0, p1, p2, p3, t) {
 i = 0;
 document.querySelectorAll(".card").forEach((card) => {
     card.style.zIndex = -i;
+
+    if(i%2 == 0) {
+        card.classList.add("bottom");
+    } else {
+        card.classList.add("top");
+    }
+
     i++;
 });
 
@@ -85,7 +92,8 @@ function handleScroll(event) {
     percent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
     let i = 0;
     allcards.forEach((card) => {
-        const start = i / numberOfCards;
+        let usingI = Math.floor(i/2);
+        const start = usingI / numberOfCards;
         const end = start + 1 / (numberOfCards + 1);
         let t = (percent - start) / (end - start);
         if (t >= 0 && t <= 1) {
@@ -93,14 +101,21 @@ function handleScroll(event) {
             
             // t = boozier(0.645, 0.045, 0.355, 1, t);
         }
-        const rot = clamp(179 * t, 0, 179);
+
+        let rot = clamp(179 * t, 0, 179);
+        if(card.classList.contains("top")) {
+            rot = rot + 180;
+        }
+
         card.style.transform = `perspective(20cm) rotateX(${rot}deg)`;
 
         if (rot > 90) {
-            card.style.zIndex = i;
+            card.style.zIndex = usingI;
         } else {
-            card.style.zIndex = -i;
+            card.style.zIndex = -usingI;
         }
         i++;
     });
 };
+
+window.onload = (event) => { handleScroll(null); }
