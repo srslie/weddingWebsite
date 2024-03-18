@@ -1,6 +1,7 @@
 * {
   font-family: 'American Typewriter', serif;
   text-align: center;
+  font-size: 1em;
 }
 
 main {
@@ -28,7 +29,7 @@ header {
   position: fixed;
   padding-top: 0;
   width: 100%;
-  height: 10%;
+  height: 5vh;
 }
 
 nav {
@@ -105,14 +106,24 @@ footer {
   display: inline-block;
 }
 
-.front {
-  backface-visibility: hidden;
-  transform: translate(-50%, -50%);
-}
-
-.back {
+.top {
   transform: translate(-50%, -50%) rotateX(180deg);
   backface-visibility: hidden;
+  position: absolute;
+  margin: auto;
+  width:90%;
+  top: 50%;
+  left: 50%;
+}
+
+.bottom {
+  backface-visibility: hidden;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  margin: auto;
+  width: 90%;
+  top: 50%;
+  left: 50%;
 }
 
 .card {
@@ -134,35 +145,4 @@ footer {
   background-size: cover;
   background-image: url('images/wedding_stamp.jpeg');
   background-attachment: fixed;
-}
-
-.subcard {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    overflow: hidden;
-    padding: 1rem;
-    width: 100%;
-    text-align: center;
-    color: whitesmoke;
-    background-color: whitesmoke;
-    border: goldenrod;
-    border-radius: 10%;
-}
-
-.bottom {
-  position: absolute;
-  margin: auto;
-  width: 90%;
-  top: 50%;
-  left: 50%;
-}
-
-.top {
-  position: absolute;
-  margin: auto;
-  width:90%;
-
-  top: 50%;
-  left: 50%;
 }
