@@ -4,7 +4,10 @@
 }
 
 main {
-  height: 500em;
+  height:500em;
+  top: 10em;
+  position: relative;
+  margin-bottom: 5vh;
 }
 
 html {
@@ -16,26 +19,86 @@ html {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-size: cover;
-    background-image: url('images/wedding_stamp.jpeg');
-    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
 }
 
 header {
-  padding-top: 4em;
+  padding-top: 1vh;
   position: fixed;
   padding-top: 0;
   width: 100%;
   height: 10%;
 }
 
+nav {
+  background: #222;
+  height: 2em;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+nav,
+nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  height: 100%;
+  width: 95vw;
+}
+
+nav ul li {
+  list-style: none;
+  flex-grow: 1;
+}
+
+nav li:first-child {
+  margin-right: auto;
+  font-size: 1.6em;
+  font-weight: 600
+}
+
+nav a,
+.content a,
+footer a {
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 12px;
+  margin-right: -4px;
+}
+
+nav a:hover,
+nav ul li:hover {
+  color: rgb(251, 172, 0);
+}
+
+.content,
+footer,
+nav a {
+  color: #fff;
+}
+
 footer {
   position: fixed;
-  bottom: 0em;
+  bottom: 0;
+  height: 5vh;
   width: 100%;
-  z-index: -5;
+  z-index: 100;
 }
 
 .letter {
@@ -63,6 +126,28 @@ footer {
   transition: transform;
   transform-origin: top;
   transform-style: preserve-3d;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1), 
+  0 2px 2px rgba(0,0,0,0.1), 
+  0 4px 4px rgba(0,0,0,0.1), 
+  0 8px 8px rgba(0,0,0,0.1),
+  0 2px 2px rgba(0,0,0,0.1);
+  background-size: cover;
+  background-image: url('images/wedding_stamp.jpeg');
+  background-attachment: fixed;
+}
+
+.subcard {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    background-color: whitesmoke;
+    border: goldenrod;
+    border-radius: 10%;
 }
 
 .bottom {
