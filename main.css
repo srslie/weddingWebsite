@@ -1,36 +1,142 @@
 * {
-  font-family: 'American Typewriter', serif;
+  
   text-align: center;
   font-size: 1em;
+  font-weight: 500;
+  font-family: "Sen", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
-main {
-  height:500em;
-  top: 10em;
-  position: relative;
-  margin-bottom: 5vh;
-}
-
-html {
-  overscroll-behavior:none;
-}
-
-#background_wrap {
-    z-index: -10;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+img {
+  object-fit: scale-down;
+  max-width: 3em;
+  max-height: 3em;
 }
 
 header {
-  padding-top: 1vh;
   position: fixed;
-  padding-top: 0;
+  padding-top: 1em;
+  top:0;
   width: 100%;
-  height: 5vh;
+  height: 10vh;
+  z-index: 100;
+  background-color: white;
 }
+
+h2 {
+  font-family: 'American Typewriter', serif;
+  font-size: larger;
+  color: #D1003C;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: medium;
+  color: #AF549C;
+  font-weight: 600;
+}
+
+h4{
+  color: #ED5793;
+}
+
+.attire {
+  color: #706D3C;
+}
+
+p, list {
+  font-size: small;
+  color: #4A5330;
+}
+
+.times {
+  color: #DA9418;
+}
+
+.location {
+  color: #219A92;
+}
+
+.address {
+  color: #009336;
+}
+
+.details {
+  color: #006BB2;
+}
+
+.letter {
+  display: inline-block;
+  animation-duration: 3s;
+  animation-name: slide;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes ease-in-out {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+main {
+  height:fit-content;
+  top: 10vh;
+  position: relative;
+  margin-bottom: 5vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url('images/wedding_stamp.jpeg');
+  background-attachment: fixed;
+  display:grid;
+  justify-items: center;
+}
+
+.bottom {
+  background-color:rgba(255, 255, 255, 0.517);
+  border-color: #006BB2;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+.day, section {
+  display: grid;
+  justify-items: center;
+  border-width: 3px;
+  border-color: goldenrod;
+  border-radius: 1rem;
+  padding: 5px;
+}
+
+.card {
+  width: 60%;
+  margin: auto;
+  box-shadow:  1 1 5px gray;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  opacity: .9;
+  margin: 1em;
+  padding: 1em;
+  box-shadow: -1px 6px 10px 0 rgba(120, 60, 20, .2);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  max-height: 20vh;
+  width: 100%;
+  z-index: 100;
+}
+
 
 nav {
   background: #222;
@@ -94,55 +200,39 @@ nav a {
   color: #fff;
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  height: 5vh;
-  width: 100%;
-  z-index: 100;
+@media (max-width: 640px) {
+  footer {
+    text-align: center;
+    height:fit-content;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 0.8em 0;
+  }
 }
 
-.letter {
-  display: inline-block;
+button {
+  border-radius: 30px;
+  padding: 10px;
+  margin: 0 10px 40px;
+  border-color: rgb(251, 172, 0);
+  background-color:white;
 }
 
-.top {
-  transform: translate(-50%, -50%) rotateX(180deg);
-  backface-visibility: hidden;
-  position: absolute;
-  margin: auto;
-  width:90%;
-  left: 50%;
-  transform-origin: bottom;
-  bottom: 45%;
+button:hover {
+  cursor: pointer;
+  background: #faf7f3;
+  box-shadow: -1px 6px 10px 0 rgba(120, 60, 20, .2);
 }
 
-.bottom {
-  backface-visibility: hidden;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  margin: auto;
-  width: 90%;
-  left: 50%;
-  transform-origin: top;
-  top: 55%;
-}
-
-.card {
-  position: fixed;
-  background-color: rgb(255,255,255);
-  width: 80%; 
-  left: 10%;
-  height: 38%;
-  transform: perspective(20cm);
-  transition: transform;
-  transform-style: preserve-3d;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.1), 
-  0 2px 2px rgba(0,0,0,0.1), 
-  0 4px 4px rgba(0,0,0,0.1), 
-  0 8px 8px rgba(0,0,0,0.1),
-  0 2px 2px rgba(0,0,0,0.1);
-  background-size: cover;
-  background-image: url('images/wedding_stamp.jpeg');
-  background-attachment: fixed;
+a {
+  text-decoration: none;
 }
