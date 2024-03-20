@@ -306,29 +306,6 @@ nav a {
   color: #fff;
 }
 
-@media (max-width: 640px) {
-  footer {
-    text-align: center;
-    height:fit-content;
-  }
-
-  footer {
-    flex-direction: column;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav li {
-    margin: 0.8em 0;
-  }
-
-  .card {
-    width: 100%;
-  }
-}
-
 button {
   border-radius: 30px;
   padding: 10px;
@@ -433,4 +410,42 @@ a {
 
 .events {
   row-gap: 10px;
+}
+
+@media (max-width: 640px) {
+  footer {
+    text-align: center;
+    height:fit-content;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    right: 0;
+    bottom: 0;
+  }
+
+  nav li {
+    margin: 0.8em 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .section, .day, .card, main {
+    width:100%
+  }
+
+  footer, header {
+    visibility: hidden;
+  }
+  .rsvp {
+    visibility: visible;
+    background-color: black;
+    bottom: 0;
+    right: -1em;
+    border-radius: 10px;
+  }
 }
