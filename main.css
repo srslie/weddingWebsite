@@ -127,7 +127,7 @@ h2 {
   font-family: 'American Typewriter', serif;
   font-size: x-large;
   color: #D1003C;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h3 {
@@ -138,6 +138,9 @@ h3 {
 
 h4{
   color: #ED5793;
+  font-family: 'American Typewriter', serif;
+  font-size: larger;
+  font-weight: 700;
 }
 
 .attire {
@@ -405,6 +408,7 @@ a {
   padding-left: 1em;
   padding-right: 1em;
   row-gap: 5px;
+  margin-bottom:-1.2em;
 }
 
 .events {
