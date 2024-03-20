@@ -8,6 +8,10 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .weddingletter {
   object-fit: scale-down;
   max-width: 3em;
@@ -112,10 +116,12 @@ main {
   display: grid;
   justify-items: center;
   background-color: brown;
+  width: 80%;
 }
 
 .day, section {
   display: grid;
+  width: 80%;
   justify-items: center;
   border-width: 3px;
   border-color: goldenrod;
@@ -124,7 +130,7 @@ main {
 }
 
 .card {
-  width: 60%;
+  width: 90%;
   margin: auto;
   box-shadow:  1 1 5px gray;
   background-color: white;
