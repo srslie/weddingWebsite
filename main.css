@@ -116,10 +116,9 @@ html {
 
 header {
   position: fixed;
-  padding-top: 1em;
+  padding: 1em 0em 1em 0em;
   top:0;
   width: 100%;
-  height: 10vh;
   z-index: 100;
   background-color: white;
 }
@@ -434,8 +433,8 @@ a {
     bottom: 0;
   }
 
-  .section, .day, .card, main {
-    width:100%
+  section, .events, .section, .day, .card, main {
+    width: 100%;
   }
 
   footer, header {
