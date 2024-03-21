@@ -25,30 +25,71 @@
     </div>
   </header>
   <main>
-
-    <!-- timeline -->
-    <div class="card timeline">
-      <div class="engagePic">
-        <img class="pic" src="images/proposal1.jpg">
+    <div class="day">
+      <div class="card">
+        <div class="engagePic">
+          <img class="pic" src="images/proposal1.jpg">
+        </div>
+        <h2>Alice Ruppert 
+          <br class="mobile-br">
+          & 
+          <br class="mobile-br">
+          Connor Janowiak</h2>
+        <h3 class="location">Boulder, Colorado</h3>
       </div>
-      <h2>Alice Ruppert & Connor Janowiak</h2>
-      <h3 class="location">Boulder, Colorado</h3>
     </div>
-      <div class="day" id="timeline">
+
+      <!-- timeline -->
+      <section>
+      <div class="card">
+        <h3><span id="timeline"></span>Timeline</h3>
+      <div class="border"></div>
+      <div class="bottom">
+        <p class="details">
+          We would love to see and celebrate with you at any or all events! 
+        </p>
+        <list class="timeline">
+          <li class="eventListItem">
+            <a href="#friday">Friday, May 31, 2024</a>
+            <ul>
+              <li class="eventListItem"><a href="#welcome">Welcome Picnic</a></li>
+            </ul>
+          </li>
+          <li class="eventListItem">
+            <a href="#saturday">Saturday, June 1, 2024</a>
+            <ul>
+              <li class="eventListItem"><a href="#ceremony">Ceremony</a></li>
+              <li class="eventListItem"><a href="#reception">Reception</a></li>
+              <li class="eventListItem"><a href="#afterparty">Afterparty</a></li>
+            </ul>
+          </li>
+          <li class="eventListItem">
+            <a href="#sunday">Sunday, June 2, 2024</a>
+            <ul>
+              <li class="eventListItem"><a href="#goodbye">Goodbyes</a></li>
+            </ul>
+          </li>
+        </list>
+      </div>
+      <div class="border"></div>
+      <div class="bottom"></div>
+    </div>
+  </section>
+      <div class="day">
         <div class="daycontainer">
-          <h3>Friday, May 31, 2024</h3>
+          <h3><span id="Friday"></span>Friday, May 31, 2024</h3>
         </div>
         <div class="events">
           <div class="card">
             <div class="top">
-              <h4>Welcome Picnic</h4>
+              <h4><span id="welcome"></span>Welcome Picnic</h4>
               <div class="locationPic">
                 <img class="pic" src="images/foothillspark.jpg" />
               </div>
               <p class="times">4-4:30PM</p>
               <p class="location">Boulder Foothills Community Park</p>
               <p class="address">800 Cherry Ave, Boulder, CO, 80304</p>
-              <p class="attire">Attire: Summery Tea or Cocktail</p>
+              <p class="attire">Attire: Casual, active, anything</p>
             </div>
             <div class="border"></div>
             <div class="bottom">
@@ -62,6 +103,9 @@
                 <br />
                 We'd love time for family and friends to casually mingle and
                 catch up.
+                <br />
+                <br />
+                Feel free to bring anyone and anything you want!
               </p>
             </div>
           </div>
@@ -70,19 +114,19 @@
 
       <div class="day">
         <div class="daycontainer">
-          <h3>Saturday, June 1, 2024</h3>
+          <h3><span id="saturday"></span>Saturday, June 1, 2024</h3>
         </div>
         <div class="events">
           <div class="card">
             <div class="top">
-              <h4>Ceremony</h4>
+              <h4><span id="ceremony"></span>Ceremony</h4>
               <div class="locationPic">
                 <img class="pic" src="images/museumBoulder.jpg" />
               </div>
               <p class="times">4-4:30PM</p>
               <p class="location">Museum of Boulder</p>
               <p class="address">2205 Broadway, Boulder, CO, 80304</p>
-              <p class="attire">Attire: Summery Tea or Cocktail</p>
+              <p class="attire">Attire: Summery Tea or Cocktail, florals, patterns, colors!</p>
             </div>
             <div class="border"></div>
             <div class="bottom">
@@ -99,11 +143,11 @@
 
           <div class="card">
             <div class="top">
-              <h4>Reception</h4>
+              <h4><span id="reception"></span>Reception</h4>
               <div class="locationPic">
                 <img class="pic" src="images/teahouse.jpg" />
               </div>
-              <p class="times">4-4:30PM</p>
+              <p class="times">5-10PM</p>
               <p class="location">Boulder Dushanbe Tea House</p>
               <p class="address">1770 13th St, Boulder, CO, 80302</p>
               <p class="attire">
@@ -121,22 +165,22 @@
                 Feel free to be as flashy or as casual as you want, we're here
                 to have a good time!
               </p>
-              <list>
-                <li>5pm: cocktail hour, snacks</li>
-                <li>6pm: dinner</li>
-                <li>7pm: toasts and dessert</li>
-                <li>Then dancing all night!</li>
+              <list class="eventList">
+                <li class="eventListItem">5pm: cocktail hour, snacks</li>
+                <li class="eventListItem">6pm: dinner</li>
+                <li class="eventListItem">7pm: toasts and dessert</li>
+                <li class="eventListItem">Then dancing!</li>
               </list>
             </div>
           </div>
 
           <div class="card">
             <div class="top">
-              <h4>Afterparty</h4>
+              <h4><span id="afterparty"></span>Afterparty</h4>
               <div class="locationPic">
                 <img class="pic" src="images/jungle.webp" />
               </div>
-              <p class="times">4-4:30PM</p>
+              <p class="times">10pm-1am</p>
               <p class="location">Bar Crawl</p>
               <p class="address">Pearl Street Mall</p>
               <p class="attire">Attire: Clothing Optional</p>
@@ -144,14 +188,13 @@
             <div class="border"></div>
             <div class="bottom">
               <p class="details">
-                We're walking over from the reception venue and crawling the
-                bars in Boulder! Let's party and wander the walking mall!
+                We're walking over to a bunch of bars on the walking mall from the reception venue--let's party!
               </p>
-              <list>
-                <li>Rosetta Hall (live dj and drinks)</li>
-                <li>Press Play (barcade)</li>
-                <li>Jungle (Tiki and flames)</li>
-                <li>Avanti (Late night pizza)</li>
+              <list class="eventList">
+                <li class="eventListItem">Rosetta Hall (live dj and drinks)</li>
+                <li class="eventListItem">Press Play (barcade)</li>
+                <li class="eventListItem">Jungle (Tiki and flames)</li>
+                <li class="eventListItem">Avanti (Late night pizza)</li>
               </list>
             </div>
           </div>
@@ -160,14 +203,14 @@
 
       <div class="day">
         <div class="daycontainer">
-          <h3>Sunday, June 2, 2024</h3>
+          <h3><span id="sunday"></span>Sunday, June 2, 2024</h3>
         </div>
         <div class="events">
           <div class="card">
             <div class="top">
-              <h4>Goodbye</h4>
+              <h4><span id="goodbye"></span>Goodbye</h4>
               <div class="locationPic">
-                <img class="pic" src="images/avanti.jpg" />
+                <img class="pic" src="images/avanti.jpg"/>
               </div>
               <p class="times">11AM-2PM</p>
               <p class="location">Avanti Rooftop</p>
@@ -180,10 +223,11 @@
                 We'd love to see you off and thank you for coming!
                 <br/>
                 <br/>
-                We'll be hanging out on the rooftop of a food hall on Pearl
-                called Avanti, with a lovely view of the flatirons, coffee,
-                pastries, and plenty of options if you'd like to grab lunch
-                before you leave.
+                We'll be informally hanging out on the rooftop of a food hall on Pearl called Avanti. You can just walk in and take the elevator up to the roof. Feel free to drop in or out whenever.
+                <br>
+                <br>
+                It has a lovely view of the flatirons and we'll get coffee and 
+                pastries. Plus, there are plenty of options if you'd like to grab a more substantial lunch.
               </p>
             </div>
           </div>
@@ -191,9 +235,9 @@
       </div>
 
       <!-- travel & lodging  -->
-      <section id="travel">
+      <section>
         <div class="daycontainer">
-          <h3>Travel</h3>
+          <h3><span id="travel"></span>Travel</h3>
         </div>
       
         <div class="card">
@@ -264,9 +308,9 @@
       </section>
 
       <!-- lodging -->
-      <section id="lodging">
+      <section>
         <div class="daycontainer">
-          <h3>Lodging</h3>
+          <h3><span id="lodging"></span>Lodging</h3>
         </div>
         
         <!-- basecamp -->
@@ -349,9 +393,9 @@
       </section>
 
       <!-- things to do -->
-      <section id="things">
+      <section>
         <div class="daycontainer">
-          <h3>Things to Do in Boulder</h3>
+          <h3><span id="things"></span>Things to Do in Boulder</h3>
         </div>
         <!-- Pearl St -->
         <div class="card">
@@ -426,20 +470,20 @@
       </section>
 
       <!-- Registry -->
-      <section id="registry">
+      <section>
         <div class="card">
-          <h3>Registry</h3>
+          <h3><span id="registry"></span>Registry</h3>
           <div class="bottom">
             <p class="details">
-              More than anything, we appreciate your love and presence in our
+              More than anything, we value your love and presence in our
               lives.
               <br />
               <br />
-              Please know we value and appreciate your time and travel costs in
+              Please know we appreciate your time and travel costs in
               attending.
               <br />
               <br />
-              If gift-giving is important to you, we'd most appreciate any
+              If gift-giving is important to you, we'd be most grateful for any
               donation toward our honeymoon!
             </p>
           </div>
@@ -447,22 +491,20 @@
           <div class="bottom">
             <div class="regcards">
               <div class="regcard">
-                <h4>Honeymoon Fund</h4>
+                <h4 class="location">Honeymoon Fund</h4>
                 <p class="details">
-                  If you'd like to contribute to our honeymoon, we'd appreciate
-                  your help for a drink, dinner or hotel room.
+                  We'd greatly appreciate your contribution toward a drink, dinner or hotel room on our honeymoon!
                 </p>
                 <p>
                   Cash welcome
-                  <br />
-                  <br />
+                  <br>
                   or Venmo @aliceseriously
                 </p>
               </div>
               <div class="regcard">
-                <h4>Gift Registry</h4>
+                <h4 class="location">Gift Registry</h4>
                 <p class="details">
-                  If a physical gift feels better, feel free to bring or send us
+                  If you like giving physical gifts, feel free to bring or send us
                   something small or contribute to a group item!
                 </p>
                 <button>
@@ -479,6 +521,9 @@
 
       <!-- Gallery -->
       <div class="container">
+        <div class="daycontainer galleryheader">
+          <h3><span id="gall"></span>Gallery</h3>
+        </div>
         <div class="gallery">
           <div class="gallery-item">
             <img class="gallery-image" src="images/yellowstone3.jpg" />
@@ -546,7 +591,7 @@
           <li id="lodging"><a href="#lodging">Lodging</a></li>
           <li id="thingsToDo"><a href="#things">Things To Do</a></li>
           <li id="registry"><a href="#registry">Registry</a></li>
-          <li id="registry"><a href="#registry">Gallery</a></li>
+          <li id="registry"><a href="#gall">Gallery</a></li>
           <li><a href="mailto:aliceruppert@gmail.com">Contact</a></li>
         </ul>
       </nav>

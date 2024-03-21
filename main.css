@@ -11,6 +11,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+}
+
 @keyframes wiggle1 {
     0%,100% {
         transform: translate(5px, 5px) rotate(1deg);
@@ -116,8 +120,8 @@ html {
 
 header {
   position: fixed;
-  padding: 1em 0em 1em 0em;
-  top:0;
+  padding: 1em 0em 1.5em 0em;
+  top: 0;
   width: 100%;
   z-index: 100;
   background-color: white;
@@ -125,7 +129,7 @@ header {
 
 h2 {
   font-family: 'American Typewriter', serif;
-  font-size: x-large;
+  font-size: xx-large;
   color: #D1003C;
   font-weight: 700;
 }
@@ -134,12 +138,19 @@ h3 {
   font-size: larger;
   color: #AF549C;
   font-weight: 600;
+  position:relative; 
+}
+
+/* for scroll to offset */
+h3 span{ 
+  position:absolute; 
+  top:-9vh;
 }
 
 h4{
   color: #ED5793;
   font-family: 'American Typewriter', serif;
-  font-size: larger;
+  font-size: x-large;
   font-weight: 700;
 }
 
@@ -152,12 +163,14 @@ p, list {
   color: #4A5330;
 }
 
+
 .times {
   color: #DA9418;
 }
 
 .location {
   color: #219A92;
+  font-size: larger;
 }
 
 .address {
@@ -193,9 +206,9 @@ p, list {
 
 main {
   height:fit-content;
-  top: 10vh;
   position: relative;
   margin-bottom: 5vh;
+  margin-top: 3em;
   background-size: cover;
   background-position: center;
   background-image: url('images/flowercards.jpg');
@@ -235,7 +248,8 @@ main {
 }
 
 .timeline {
-  width: 60%;
+  display: grid;
+  justify-content: center;
 }
 
 footer {
@@ -398,7 +412,7 @@ a {
 }
 
 .border {
-  background-image: url('images/border.jpg');
+  background-image: url('images/border.png');
   background-size: cover;
   height: 5em;
 }
@@ -413,8 +427,28 @@ a {
   margin-bottom:-11px;
 }
 
+.galleryheader {
+  width: 10rem;
+  margin: auto;
+  margin-bottom: -20px;
+  
+}
+
 .events {
   row-gap: 10px;
+}
+
+.mobile-br {
+  display:none;
+}
+
+.eventList {
+  display: grid;
+  justify-content: center;
+}
+
+.eventListItem {
+  text-align: left;
 }
 
 @media only screen and (max-width: 700px) {
@@ -433,24 +467,25 @@ a {
     bottom: 0;
   }
 
-  nav li {
-    margin: 0.8em 0;
-    right: 0;
-    bottom: 0;
-  }
-
   section, .events, .section, .day, .card, main {
     width: 100%;
   }
 
-  footer, header {
+  header {
+    position:relative;
+  }
+  footer {
     visibility: hidden;
   }
   .rsvp {
     visibility: visible;
+    position: absolute;
     background-color: black;
     bottom: 0;
-    right: -1em;
-    border-radius: 10px;
+    border-radius: 10px 0px 0px 10;
+  }
+
+  .mobile-br {
+    display:block;
   }
 }
