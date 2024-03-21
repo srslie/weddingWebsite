@@ -224,6 +224,8 @@ main {
   border-color: #006BB2;
   border-radius: 1em;
   padding: 0em 4em 2em 4em;
+  display: grid;
+  justify-content: center;
 }
 
 
@@ -449,6 +451,10 @@ a {
 
 .eventListItem {
   text-align: left;
+}
+
+.intro {
+  margin: 5%;
 }
 
 @media only screen and (max-width: 700px) {
