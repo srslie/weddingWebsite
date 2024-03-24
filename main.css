@@ -204,8 +204,8 @@ p, list {
 main {
   height:fit-content;
   position: relative;
-  margin-bottom: 10%;
-  margin-top: 3em;
+  margin-bottom: 5vh;
+  margin-top: 10%;
   background-size: cover;
   background-position: center;
   background-image: url('images/flowercards.jpg');
