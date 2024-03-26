@@ -454,6 +454,10 @@ a {
   margin: 5%;
 }
 
+.registry {
+  width: 80%;
+}
+
 @media only screen and (max-width: 700px) {
   footer {
     text-align: center;
