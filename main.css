@@ -160,6 +160,10 @@ p, list {
   color: #4A5330;
 }
 
+.shoutoutlist li {
+  margin: 10px 0;
+}
+
 
 .times {
   color: #DA9418;
